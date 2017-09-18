@@ -1,0 +1,27 @@
+{
+  "name": "dota2api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umeshanthem/Dota2Api.git"
+  },
+  "keywords": [
+    "dota2Api"
+  ],
+  "author": "umesh_ravuru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umeshanthem/Dota2Api/issues"
+  },
+  "homepage": "https://github.com/umeshanthem/Dota2Api#readme",
+  "dependencies": {
+    "mongodb": "^2.2.31",
+    "request": "^2.81.0",
+    "unirest": "^0.5.1"
+  }
+}
