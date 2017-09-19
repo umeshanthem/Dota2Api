@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/getMatches.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/umeshanthem/Dota2Api#readme",
   "dependencies": {
+    "async": "^2.5.0",
+    "child_process": "^1.0.2",
     "mongodb": "^2.2.31",
     "request": "^2.81.0",
     "unirest": "^0.5.1"
