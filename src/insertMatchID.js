@@ -2,8 +2,9 @@ var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
  
 var getmatchid = require("./getMatcheID.js"); 
-// Connection URL 
-var url = 'mongodb://localhost:27017/dota2';
+// Connection URL
+var url = "mongodb://umeshravuru:Vedavathi_1@cluster0-shard-00-00-xaakj.mongodb.net:27017,cluster0-shard-00-01-xaakj.mongodb.net:27017,cluster0-shard-00-02-xaakj.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin";
+//var url = 'mongodb://localhost:27017/dota2';
 // Use connect method to connect to the Server 
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);

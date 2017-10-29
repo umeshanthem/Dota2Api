@@ -19,6 +19,9 @@ var req = http.request(options, function (res) {
     chunks.push(chunk);
   });
 
+  res.on("error", function(err){
+      console.log(err);
+  });
   res.on("end", function () {
     var body = Buffer.concat(chunks);
     //console.log(body.toString());
@@ -31,7 +34,8 @@ var req = http.request(options, function (res) {
 		//console.log(players[i]["account_id"]);
 		accountIDs.push(players[i]["account_id"]);
 	}
-	cb(null,matchID);
+
+	cb(null,accountIDs);
 	
   });
 });
