@@ -1,7 +1,8 @@
 var http = require("https");
-
+var fs = require('fs');
 module.exports = {
 getMatchids : function(matchID,cb){
+    // console.log("--"+matchID);
 var options = {
   "method": "GET",
   "hostname": "api.opendota.com",
@@ -21,8 +22,10 @@ var req = http.request(options, function (res) {
 
   res.on("error", function(err){
       console.log(err);
+      cb(err,null);
   });
   res.on("end", function () {
+
     var body = Buffer.concat(chunks);
     //console.log(body.toString());
 	var str_body = body.toString();
@@ -30,11 +33,17 @@ var req = http.request(options, function (res) {
 	var accountIDs = [];
 	var players = result["players"];
 	//console.log()
+      var wri  = matchID+" - ";
 	for(var i in players){
 		//console.log(players[i]["account_id"]);
+        // fs.appendFile('AccountIDs1.txt',players[i]["account_id"]+"|");
+        wri = wri + players[i]["account_id"]+"|";
 		accountIDs.push(players[i]["account_id"]);
 	}
-
+	wri = wri + "\n";
+      if(wri.length<15)
+          console.log(result);
+      fs.appendFile('AccountIDs1.txt',wri);
 	cb(null,accountIDs);
 	
   });

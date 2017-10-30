@@ -46,7 +46,7 @@ var insertDocuments = function(db, callback) {
 				 
 				//console.log("umehs");
 				collection.updateOne(
-				{"id":oldData},{$set:{"id":data}},
+				{"133418914":oldData},{$set:{"133418914":data}},
 				function(err,result){
 					console.log("Updated");
 					callback(null);
@@ -58,7 +58,7 @@ var insertDocuments = function(db, callback) {
 			 else{
 				 
 				  collection.insert([
-						{"id" : data}
+						{"133418914" : data}
 						], function(err, result) {
 					if(err)
 						callback(err);
