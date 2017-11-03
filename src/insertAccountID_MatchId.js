@@ -2,7 +2,7 @@ var MongoClient = require('mongodb').MongoClient
 var assert = require('assert');
 var exec = require('child_process').exec;
 var asyn = require('async');
-var quequ = require('./queue_test.js');
+//var quequ = require('./queue_test.js');
 var getAccountID = require("./getAccountIDs.js");
 var sleep = require('system-sleep');
 var fs = require('fs');
@@ -66,7 +66,7 @@ var insertDocuments = function(db, callback) {
                         }
                         fs.appendFile('AccountIDs.txt',"\n");
                     }
-                   // sleep(10);
+                    sleep(350);
                     callback();
                     //console.log(_matchID_json);
 
